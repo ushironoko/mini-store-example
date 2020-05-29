@@ -1,9 +1,5 @@
 import { ref, inject, provide } from 'vue'
 
-type UseStore = {
-  [key: string]: any
-}
-
 export const key = Symbol()
 
 export const createStore = () => {
@@ -19,6 +15,6 @@ export const provideStore = () => {
   provide(key, createStore())
 }
 
-export const useStore = (): UseStore | undefined => {
+export const useStore = (): any => {
   return inject(key)
 }

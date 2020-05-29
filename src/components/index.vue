@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, inject } from 'vue'
+import { defineComponent } from 'vue'
 import { useStore } from './miniStore'
 
 export default defineComponent({

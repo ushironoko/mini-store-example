@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, provide } from 'vue'
+import { defineComponent } from 'vue'
 import { provideStore } from './components/miniStore'
 import Index from './components/index.vue'
 import Sub from './components/sub.vue'
