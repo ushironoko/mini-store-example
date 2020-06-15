@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { useStore, ProvideKey } from './miniStore'
+import { useMiniStore, ProvideKey } from './miniStore'
 import { CounterStore } from '../App.vue'
 
 export default defineComponent({
@@ -15,8 +15,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { increment } = useStore(props.counterKey, {} as CounterStore)
-    const name = useStore(props.nameKey, '')
+    const { increment } = useMiniStore(props.counterKey, {} as CounterStore)
+    const name = useMiniStore(props.nameKey, '')
 
     return {
       increment,
