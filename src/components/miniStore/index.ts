@@ -2,7 +2,7 @@ import { inject, provide } from 'vue'
 
 export type ProvideKey = string | Symbol
 
-export const provideStore = <T extends string | object> (store: T, key?: string) => {
+export const provideStore = <T extends string | object> (store: T, key?: symbol | string) => {
   const provideKey = key == null ? Symbol() : key
   provide(provideKey, store)
   return provideKey

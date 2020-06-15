@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, PropType, inject } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { useStore, ProvideKey } from './miniStore'
 import { CounterStore } from '../App.vue'
 
