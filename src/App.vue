@@ -25,8 +25,8 @@ export default defineComponent({
     const injectKey2 = provideStore('ushironoko', 'injectKey2')
 
     return {
-      injectKey1,
-      injectKey2,
+      key1: injectKey1.provideKey,
+      key2: injectKey2.provideKey,
     }
   }
 })
@@ -34,7 +34,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <Sub :counterKey="injectKey1" />
-    <Index :counterKey="injectKey1" :nameKey="injectKey2" />
+    <Sub :counterKey="key1" />
+    <Index :counterKey="key1" :nameKey="key2" />
   </div>
 </template>

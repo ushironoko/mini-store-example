@@ -1,11 +1,11 @@
-import { inject, provide } from 'vue'
+import { inject, provide, readonly } from 'vue'
 
 export type ProvideKey = string | Symbol
 
 export const provideStore = <T extends string | object> (store: T, key?: symbol | string) => {
   const provideKey = key == null ? Symbol() : key
   provide(provideKey, store)
-  return provideKey
+  return readonly({provideKey})
 }
 
 export const useMiniStore = <T>(key: string | Symbol, defaultValue?: T) => {
