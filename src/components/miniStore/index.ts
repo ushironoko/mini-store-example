@@ -1,20 +1,13 @@
-import { ref, inject, provide } from 'vue'
+import { inject, provide } from 'vue'
 
-export const key = Symbol()
+export type ProvideKey = string | Symbol
 
-export const createStore = () => {
-  const count = ref(0)
-  const increment = () => count.value++
-  return {
-    count,
-    increment,
-  }
+export const provideStore = <T extends string | object> (store: T, key?: string) => {
+  const provideKey = key == null ? Symbol() : key
+  provide(provideKey, store)
+  return provideKey
 }
 
-export const provideStore = () => {
-  provide(key, createStore())
-}
-
-export const useStore = (): any => {
-  return inject(key)
+export const useStore = <T>(key: string | Symbol) => {
+  return inject<T>(key)
 }

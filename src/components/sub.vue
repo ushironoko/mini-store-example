@@ -1,12 +1,22 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useStore } from './miniStore'
+import { defineComponent, PropType, inject } from 'vue'
+import { useStore, ProvideKey } from './miniStore'
+import { CounterStore } from '../App.vue'
 
 export default defineComponent({
-  setup() {
-    const { count } = useStore()
+  props: {
+    counterKey: {
+      type: String as PropType<ProvideKey>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const counterStore = useStore<CounterStore>(props.counterKey)
+    const count = counterStore && counterStore.count || 0
+
     return {
-      count
+      count,
+      name,
     }
   }
 })

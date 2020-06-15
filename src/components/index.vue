@@ -1,12 +1,27 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useStore } from './miniStore'
+import { defineComponent, PropType, inject } from 'vue'
+import { useStore, ProvideKey } from './miniStore'
+import { CounterStore } from '../App.vue'
 
 export default defineComponent({
-  setup() {
-    const { increment } = useStore()
+  props: {
+    counterKey: {
+      type: String as PropType<ProvideKey>,
+      required: true,
+    },
+    nameKey: {
+      type: String as PropType<ProvideKey>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const counterStore = useStore<CounterStore>(props.counterKey)
+    const increment = counterStore && counterStore.increment || (() => {})
+    const name = useStore<string>(props.nameKey) || ''
+
     return {
-      increment
+      increment,
+      name,
     }
   }
 })
@@ -14,4 +29,5 @@ export default defineComponent({
 
 <template>
   <button @click="increment">increment</button>
+  <div>created by {{ name }}</div>
 </template>
