@@ -124,7 +124,7 @@
     "@vue/compiler-core" "3.0.0-beta.15"
     "@vue/shared" "3.0.0-beta.15"
 
-"@vue/compiler-sfc@^3.0.0-beta.14":
+"@vue/compiler-sfc@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.0.0-beta.15.tgz#8a8cc309fd56d5ceca76160743a4eb4e8a43281b"
   integrity sha512-ZNHwUCbhGJHNmUQ51Q/Er7kvPUWru00DlWTGC3u/C1wbcqx/bwgzJ6YENbFq0rcGwrUCo7H6nP6ZSAhE2Euiog==
@@ -4251,7 +4251,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.9.3:
+typescript@^3.9.5:
   version "3.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
   integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
@@ -4428,7 +4428,7 @@ vue-loader@^16.0.0-beta.3:
     merge-source-map "^1.1.0"
     source-map "^0.6.1"
 
-vue@^3.0.0-beta.14:
+vue@^3.0.0-beta.15:
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.0-beta.15.tgz#99f107534755d3a237b51fc1279c43af2fefde6e"
   integrity sha512-KTmvfNpkvD6mao8vloqjUMjrHEivS1HZvHmYeHPRHqU2HRvNcrZuwXYvETt3dGOTu0Oj7zAWQXP+uZ34CW75sw==
