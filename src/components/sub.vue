@@ -11,8 +11,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const counterStore = useStore<CounterStore>(props.counterKey)
-    const count = counterStore && counterStore.count || 0
+    const { count } = useStore(props.counterKey, {} as CounterStore)
 
     return {
       count,

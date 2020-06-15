@@ -8,6 +8,6 @@ export const provideStore = <T extends string | object> (store: T, key?: symbol 
   return provideKey
 }
 
-export const useStore = <T>(key: string | Symbol) => {
-  return inject<T>(key)
+export const useStore = <T>(key: string | Symbol, defaultValue?: T) => {
+  return inject<T>(key, defaultValue || {} as T)
 }

@@ -15,9 +15,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const counterStore = useStore<CounterStore>(props.counterKey)
-    const increment = counterStore && counterStore.increment || (() => {})
-    const name = useStore<string>(props.nameKey) || ''
+    const { increment } = useStore(props.counterKey, {} as CounterStore)
+    const name = useStore(props.nameKey, '')
 
     return {
       increment,
