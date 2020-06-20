@@ -25,8 +25,8 @@ export default defineComponent({
     const injectKey2 = provideStore('ushironoko', 'injectKey2')
 
     return {
-      key1: injectKey1.provideKey,
-      key2: injectKey2.provideKey,
+      key1: injectKey1,
+      key2: injectKey2,
     }
   }
 })
